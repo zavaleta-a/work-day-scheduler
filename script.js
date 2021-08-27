@@ -6,11 +6,26 @@
 // When the page is refreshed, the info entered is still shown
 // Use moment.js to show the date
 
-var date = moment().format('dddd');
+var date = moment().format('MMMM Do YYYY');
+// Line 29 is where the date goes.  #currentDay .lead
 $('#currentDay').html(date);
 
-// Line 29 is where the date goes.  #currentDay .lead
+// Color code timeblocks (.past, .present, .future)
+if (timeBlock < currentTime) {
+    $(this).addClass('past');
+    $(this).removeClass('present');
+    $(this).removeClass('future');
+}
 
+else if (timeBlock === currentTime) {
+    $(this).removeClass('past');
+    $(this).addClass('present');
+    $(this).removeClass('future');
+}
 
-
+else (timeBlock > currentTime) {
+    $(this).removeClass('past');
+    $(this).removeClass('present');
+    $(this).addClass('future');
+}
 
