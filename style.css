@@ -24,7 +24,7 @@ textarea {
 .description {
   white-space: pre-wrap;
 }
-
+/* Use this for the time block styling */
 .time-block {
   text-align: center;
   border-radius: 15px;
@@ -70,4 +70,3 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-/* Hour block styling */

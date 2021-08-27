@@ -4,6 +4,13 @@
 // When you click on a timeblock, you can enter an event
 // Create a save button that will save entered info into local storage
 // When the page is refreshed, the info entered is still shown
+// Use moment.js to show the date
 
-var date = moment().format('2016-01-01T23:35:01');
+var date = moment().format('dddd');
+$('#currentDay').html(date);
+
+// Line 29 is where the date goes.  #currentDay .lead
+
+
+
 
