@@ -24,7 +24,7 @@ else if (timeBlock === currentTime) {
     $(this).removeClass('future');
 }
 
-else (timeBlock > currentTime) {
+else if (timeBlock > currentTime) {
     $(this).removeClass('past');
     $(this).removeClass('present');
     $(this).addClass('future');
@@ -32,6 +32,11 @@ else (timeBlock > currentTime) {
 
 // Create a save button that will save entered info into local storage
 // Need to create an eventListener for .saveBtn
-$('savebtn').click(function() {
-    console.log('Saved');
+$('.saveBtn').click(function() {
+    console.log($(this).prev().val());
 });
+
+localStorage.setItem(time, text);
+
+var timeBlock
+var currentTime
