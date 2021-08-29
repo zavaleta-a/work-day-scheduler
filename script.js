@@ -7,11 +7,11 @@
 
 // Variables for if else if statement
 var currentTime = moment().hour();
-
 // Use moment.js to show the date
 var date = moment().format("MMMM Do YYYY");
 // Line 29 is where the date goes.  #currentDay .lead
 $("#currentDay").html(date);
+
 
 function hourTracker() {
   $(".time-block").each(function () {
@@ -38,9 +38,10 @@ function hourTracker() {
 // Need to create an eventListener for .saveBtn
 $(".saveBtn").click(function () {
   console.log($(this).prev().val());
-  var text = $(this).prev().val();
+  var text = $(this).siblings(".description").val();
   var time = $(this).parent().attr("id");
   console.log(text);
+  
   localStorage.setItem(time, text);
   console.log(localStorage.getItem(time));
 });
@@ -48,5 +49,12 @@ $(".saveBtn").click(function () {
 // Need to be able to get items that have been saved to local storage
 // Create a loop
 // Target specific
-$("#0900").val(localStorage.getItem("0900"));
-$("#1000").val(localStorage.getItem("1000"));
+$("#0900 .description").val(localStorage.getItem("0900"));
+$("#1000 .description").val(localStorage.getItem("1000"));
+$("#1100 .description").val(localStorage.getItem("1100"));
+$("#1200 .description").val(localStorage.getItem("1200"));
+$("#1300 .description").val(localStorage.getItem("1300"));
+$("#1400 .description").val(localStorage.getItem("1400"));
+$("#1500 .description").val(localStorage.getItem("1500"));
+$("#1600 .description").val(localStorage.getItem("1600"));
+$("#1700 .description").val(localStorage.getItem("1700"));
