@@ -1,4 +1,4 @@
-# workDayScheduler
+# workDayScheduler link: https://zavaleta-a.github.io/workDayScheduler/
 # The work day scheduler displays the current date at the top of the page.
 # It demonstrates today's day as MM DD YYYY.
 # Business hours are shown in a 24 hour format beginning at 0900 and ending at 1700.
